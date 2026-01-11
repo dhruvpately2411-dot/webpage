@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Booking Banner</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+        }
+
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 500px; /* Adjust height as needed */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .content {
+            margin-top: 60px;
+            z-index: 2;
+        }
+
+        .book-now {
+            color: #FFCC00;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .phone-number {
+            color: #FFFFFF;
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        /* The Car Styling */
+        .car-wrapper {
+            position: absolute;
+            bottom: 30px; /* Adjusted to sit on the yellow bar */
+            width: 700px; /* Adjust size of the BMW M4 */
+            z-index: 3;
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+           
+        }
+
+        .car-wrapper img {
+           
+            width: 300px;
+            height: 200px;
+        }
+
+        /* Yellow Bottom Bar */
+        .bottom-bar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 120px;
+            background-color: #FFD700;
+            z-index: 1;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            .phone-number { font-size: 2.5rem; }
+            .car-wrapper { width: 90%; }
+        }
+        .d1{
+            margin-top: -30px;
+           background-color: #FFD700;
+           border-radius: 20px;
+           padding: 10px;
+           width: 80px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="banner-container">
+        <div class="content">
+            <div class="book-now">Book Your Taxi Now!</div>
+            <h1 class="phone-number">+91 95866 09109</h1><br>
+            <p style="color: whitesmoke;">my taxi is the best and safest in the india.</p><br>
+        </div>
+
+        <div class="car-wrapper">
+            <img src="./download.png" alt="taxi">
+        </div>
+
+        <div class="bottom-bar"></div>
+    
+    </div>
+
+</body>
+</html>

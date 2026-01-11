@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Booking Landing Page</title>
+    <style>
+        /* General Reset and Font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-yellow: #ffcc00;
+            --dark-gray: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--primary-yellow);
+            padding: 10px 10%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+        }
+
+        /* Header / Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10%;
+            background: var(--white);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+
+        .btn-register {
+            background-color: var(--primary-yellow);
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1549194388-2469d59ec69c?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--primary-yellow);
+            margin-bottom: 20px;
+        }
+
+        .hero .booking-btn {
+            background-color: var(--primary-yellow);
+            color: black;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Vehicle Selection Section */
+        .selection-section {
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .selection-section h2 {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .vehicle-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .icon-box {
+            cursor: pointer;
+            color: #ccc;
+        }
+
+        .icon-box.active {
+            color: var(--primary-yellow);
+        }
+
+        /* Cards Layout */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid var(--primary-yellow);
+            border-radius: 8px;
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            text-align: left;
+        }
+
+        .card img {
+            width: 180px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .card-info h3 {
+            margin-bottom: 10px;
+        }
+
+        .card-info ul {
+            list-style: none;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .book-now-sm {
+            background: var(--dark-gray);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div>Connect with us: f | t | in | g+ | yb</div>
+        <div>Support | Marketplace | Documentation | Portfolio | Log In / Sign Up</div>
+    </div>
+
+    <header>
+        <div class="logo">🚖 Taxi Booking</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn-register">Register</a>
+    </header>
+
+    <section class="hero">
+        <h2>The best way to get wherever you're going</h2>
+        <h1>+81 254781-134445</h1>
+        <a href="#" class="booking-btn">Booking Now</a>
+    </section>
+
+    <section class="selection-section">
+        <h2>Select your favorite vehicle</h2>
+        
+        <div class="vehicle-icons">
+            <span class="icon-box">🚐</span>
+            <span class="icon-box active">🚕</span>
+            <span class="icon-box">🏍️</span>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMwgDFG6JX8g2anD2s8GiPIEqQWrLnESa-cQ&s" alt="The Party Van">
+                <div class="card-info">
+                    <h3>The Party Van</h3>
+                    <ul>
+                        <li>✓ 150 km/h max speed</li>
+                        <li>✓ Free cancellation</li>
+                        <li>✓ 24/7 customer helpline</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">₹1500</span>
+                        <a href="#" class="book-now-sm">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./download.png" alt="Quick Cab">
+                <div class="card-info">
+                    <h3>Quick Cab</h3>
+                    <ul>
+                        <li>✓ 120 km/h max speed</li>
+                        <li>✓ Free cancellation</li>
+                        <li>✓ 24/7 customer helpline</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">₹800</span>
+                        <a href="#" class="book-now-sm">Book Now</a>
+                    </div>
+                </div>
+            </div>
+              <div class="card-container">
+            <div class="card">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxETEhUTEhQWFRIXGBgXGRcYFxgYHhYYGBgXGBoVIBgZIiggGBomGxcVITEhJikrLjEuFx8zODMtNygtLi0BCgoKDg0OGxAQGy0mICIvLy8uKy03Ky8rKy0tLTUtLS0tKystLS0tLzctLS0rMC0tKy03LSsuLystLS0tKy0tLf/AABEIALQBGQMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABQEDBAYHAgj/xAA/EAACAQIDBQYCCAQGAgMAAAABAgMAEQQSIQUGMUFRBxMiMmFxgZEUI0JSobHB8GJygtEIFTNDkvFT4TTCw//EABoBAQADAQEBAAAAAAAAAAAAAAABAgMEBQb/xAAwEQEAAgIABQEGAwkAAAAAAAAAAQIDEQQSITFBURMyYXGhsSLR8AUVI0KBkcHh8f/aAAwDAQACEQMRAD8A7jSlKBSlKBSlKBSlKBSlKBWtb077YXASRxzBy0guMqggC9rkkjnWy1yTtdwoxHdzRBmCeAlRmFvEc2nK+l+GtZ5MtMeuadbTFZns6pgcWk0ayRtmRhcH0/Q+lX65n2WbWZcM8ejKslwCdQCBew6XBPveulo1wCOB1qMeemS01rPWO6ZrMdZVpSlaqlKUoFUJqJ3l3jw2Bi73EOFB0VftO33VHM1wzeffHFY5yb5IR5UJ8IHUjgT6n8KD6JVgeBvVa5R2ILITiGDh4QFUsBa8ly2W/A2U34fbFdXoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFCaVz/tf3o+jYf6PGfr5wRpxWPgx9Cx8I92PKgjTvjPjcdJHh2IwUQIJHCUnTMTxINjYC2gueNq2SFLC3OuQ7n70LhFKFVZS4LNqDwsxFhrysCfSpzeXtBjaEphc4dtCxABUHktj5jw9ONeBxeHNxGfpHT/Dsx2rSjJ2lvLh4toIsIUeLJPINA3LLbgSvEt7iuu7Me8a+mnyNq+XIsQ8YIspDgX1U5VBuADxU39r+1q7NuH2iDESrhZoljLXERQkjQEhGv8AasPNzPIV6XD8L7O/NXtrXz+LC9+aNS6PSlK7WRULtjbbJIMPh4jPimXPlvkSNCSokkk1yqSGAABY5TYaEiDHarsrO0bSurKzK14pLAqSDqARa4rE3e3kw8m08bL9Ij7losGkRJy5gVlcAZragtJfpmF6DHbsoTEztidp4mTFSNeyLeKNByRQCWyj0I6m5q9P2MbIPlSWP+WZ/wD7XroKOCLggg8CNb16oMDYex4MJCkGHQJGnAcSSdSxJ1LE6kms+lKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBXzt2wYtH2jI6MSFVI8xHhDqPEFbmBmI/mL1u3ajv8Y74TBvaUZxM9mBQCwyqSALkk+IcAumpuOXYbBzhGBQulzZXcMNLgkhj4Rpe/A1ExuNESjcMtx4ddNOYPyqxJHIxyEW0NyOXX4mpAbPfuw1mjP8ACylT8FzFefKvGzHOd4ySxU+EnTwtrc/dPW3Oq1pEJmVsiONQLgagfscazNnbVEUscsZu0bq45aqb29tKtY44fnZn11FtCefuNPkKhcQSh9Sb6DQ+t+t76Voh9CR9qkJBPcs1wCoRlPHkxNgptbmT6VH4XfTa08ZEUMGexHeDOVU8ib+EWH2SdbVyzZG34sLEXkhWSZXymKQGxBHFlI0IvcachUhJ2hHEDKwyADRQBYDoLWt8hWc1vM99QtuumNvDu9iomMrAyNKzvLkQjKxNyeYIJJtY/KtaWd84MbiMqMpVzbQHUHS2t+FrVM4jHSS+WAN6uo/WqYcY5TeMxJ6CNLdbHwmtFU9u3vBtTCALD3UWYD/5DCNZSSSO7MoVDx5HnW7pvVvKgBfZyyC17ple/t3chv8AAVM9n+9v0uMYbGooxAFr+ZJwOYv9q3FT71t+xtjw4VWSBciM7SZbkqpa1wqnRF08osOPWoGs9nm9eMxplGJw3cd3axySJqT5bScTx4dPWt1pSgUpSgUpVCaCtKxJtpQLo0qA+rCqR7Vw7EgTRkjiM63HwvQZlKoDVaBSlKBSlKBSlKBSlKBSlKBSlKBSlQu9m8MeCgaRvE9iI0vbO3Ieg6mg4Hvpj1xO09oSvMqRxlIVB4uVZY8igeokcn0Nev8AOVETjEoix6IrKRcjlprewC+9a9tmNPE7JmLMWYg2N2JJPzNR+AwAmYCKN2HO5AC+5AqRsKdzILxuhYsxyhmVn1JFgBprx4adLVF7UxiRKYw2Zz53+8entyrLw2zQjCOIqJZGCFr5ioJAyixtqTqb1JyYDZ+FijkaRXlcMxLElgCfqiECkaLa40Nzxrmz8RGKYrqZmfEL0pzdWoYTHRpo6kjQi6KwI9mtbrcVbm2iWY9ylgBfgTa3FrXOUfGpTaO0RJK80cdkc+abyi/QcT1429BVpJ3OqPpYqZDaOMBhYhUHm0NtflWtLWtETMaVmIjswtoY7EygSSuxIsoJAF1XQaW1tWMs8wYeK2XUGwst9L8K2DZrxEgd5IzqCA2d08JNyBY8L61423sgW71M1uJU3Oa3Eg3BJ6i9XQrFtBiBmYt6nn8BpWZDtAAdPQflYc61ISKdEQn99Br+NZMbSoRcEHiARb4+L86Dd9j4+bvkBVkObh5SCASNTbW9vau77obwDFRsrH66M5XGlz0ew687c7+lfPO4UZbaCMZAzBXfW7/ZK+Ysvi8fI1J7sb0vBjnZGuQ5uL6Ot9VPv+dc9MlpyzXfaI/vteYiK7fSdKx8LjEkjWRT4HUMD6EXqxicaeCAH1P9udXy56Yo3afzRWk27M+oafbX3GiA6s5J9wign52rEx2DeYWkke3RWKj5La/xrXcZuPEwOSR0PwYfI6/jXH+8aT4mPjMflO2vsJTUu3Yb/WY11H8ELIP+TK36VB7zY2AoPoznEuT4g0jEBbHmSNc2XSuZ7ZxU0UsmHuWdGymxNjzB9uBqO2RPM+JVBKYyTdmU+RR5jx6cutq76TMxuWM93VsHtZlAtg+6UaF3kjjj9SMoLE35AGsbE71I+SGCFJTI12bu72A+4GXxHjqSOvCq4qOWaJ3mKx4Yi7FjlLIBotzwHPS2prVcDtLCxYhJcA882IkvFHAG8DsbgMVIuoGpzHpcVdDuWw8VHJCGiDBAWWzAhgysVYEHmGDCs+uc7H3ix+FEeHk2RicurNIkiS3d2Lu3hGW2Zm0LCuig1ArSlKBSlKBSlKBSlKBSlKBSlKDD2ttKLDwvNKwWNBcn9B6muHbb2ycfIzyPkLECNeNgGBC26HnzN637tE3Pxu1JEhEyYfBIA5Iu7ySXOmQWFlHMnieFcf3j7PdoYTEPFCmIxUa2ImSJwDmFyLAnUcNDQWdpvHG5VirW0OU3BPMC45daj5NoSMuWNckXRRYH3bgal9kdmm1sRY/RzGp5zMI/w1b8KxN+t2Z9ltGkyqwkQlHW5XMD4l11uLg24HNzoIcTFDfvCGHDuzqP6+C+4DUixAVjlVQ4OrMO8e/8z3F/YLUThdTmbUL4j8OA+JtUjAgy2J1OrepNBlyN3tzdnI5P1t5ioJuPS59SeAj5MPPIfKzDkfKB7XsB8KtuSHJUmyjMdfwuNddPnXU9ytpbLnUXwmadRdr5SBrxGbxW+J96DnOB2W2YEuoI1svjP4VMxqnUufU2HtYV15to4GxjWNon4AWHHlbW2vU6a1zPfrMkqyBVQWykgg3boxGnAafGg84bZU7Rs0QjQKuYgLrl11HXW3L7QPCoqWRj4J/Gh4EDVD94fqOdZmA2o7IyRsAHyh9LnwG4yn7PEgnp7A17xEtgF4sbkAnTldrfAVPRHV42Ls4YdJpnAKkFFb6yzAqx0scp8Xd2v919L1qWCnZZLsLMTe/Uk1NyYh5ERZWBVb5VHAEkkm33jc6/kNKw8Rs5GHhYqfmP7/jXPixTW1r2nrP0iOzS1omIiPDvPZkjpggWJ8bu4B5Loo+Bylv6q2ppxXNezXbbHCCF2u8JyX6odVPyuP6a2psZfnXynGcZfHmvSfWXo4sUWrEpt8WBWrb6b5rhI7KQZ2ByL0/jb+Efiaj96d6Y8JHckGRr5Evx9T0UVyRdrpLiRLjM8iFruFt4rcFsTbL6V1fs3h8vFT7TJ7n3/wBf8Z571x/hr3+zaNj7pYnGjvpZu7WS7a+eS9/rD0Ums/AYOPZisZhBi2JCwCOMh2k6MxuLaHk1uRvpVvE9oGClZimHkDlLFmKR+BeCeFiSOij8BcjfOzfdBwExmMQK4BMENtIFY3zG+pc6ceHodF+o7PPRm9G420MbgO9klP0sESDCrZY8nOG/HvSPtE2uLaDUatuzsyGLH7OnwzFI52MUisbvh8REDmXxeICQXFjwuw9K+g61rG7ibPkxa40xWxKukmdWZbtGbglQcpvwNxrQbLSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlYW1NrYfDrnnlSJersBf2HE/Cgza4l/iUOmBHI/SP/wAa2Ta/bNs+I2hSXEHqqhF+bkH8K5n2gb+naYjVsKsYjL2JkLkhrAjyrl8o4X4caDRoYvCq82Oc/wAq6KPibn5Vl4ohTqeGny4j53qyxIbNbkot6KALD0rYNzt3J9oB4Iyis1izsD4VQk5QR5cxt8qDWsUuSEX80pzH+UcPx/Kr+xdptAySIDcEAg2swJ8QB5ae+tjWwbX3dVZpExbNAytkjAylSii1w3A69DUNjth93lyNnuwVTpqWNgLA0HVJHSeBZRzAIPUHlXjA4lo82VYyz2Bd1zEAa21NuNr6chVrZuD7uJE5BQPgB+z8axtuY8QRFtMx0UHr1PoBc/CoSgt69sMGDOVLKDwVVvmOg0A6X+NafFLM7NKLlwOXK9h8tRXjaOLaVy7tz4nmetZ2y3IRyvM92dNSrqdddLXA6Hh8JQsLJILJKbMqgjnmU8Lm/Ef3rw07HhoOp0FSM+y3kBcAs6i3gRmA6Lp78ONR0cCnUnMf3y5VIqmJlSzRyyAnQlGtp6ga296oNs4kkZp5hp/5H019DWUq6W5Vi7dVLqQtmIBJ63AP51ScdJncxCYtMeVuSYubtJnbhdmJNhyu1e4oC1gdABx4/lxNYeDiufSpINZgLXbgbW0H3b/nVojXZDbuyzA4dcesmKyiGNWkzSEAZ7qI1H3uOb3X2r6IwW2MNMbRTRueiuCflxr5mm2daVspIiNmS/JHAcC/oG58bVejx0Mf+4Sw4Zb/AJjh+lB9Q0ri27PaVLGChYYhQuiyMUYEcs1ibadDyroO5G+sG0VkCI0U0RAkie11vwYEeZTY6+lBtFKUoFKUoFKUoFKUoFKUoFKUoFKVA7570Q7PwzTy6nyxpfWRzwUenMnkAaDJ3j3hw2Ci73EPlH2VGrOeirzNcD3738k2g+WLDQRx8BI8UcspH87A5PZdR1qD2rtXE4+czTtmc6qBfKF5Iov4QP1ub3NeM1iI4lzyMQygcuF79B/ek6jrIjFwcwUG6m4J1HS2mnvVmTFsnmVD7N/3WwNsde6M+IlzoJRFaIjKJWBbuwx8zAanKDa4udRXrC7tx4mCWaCF+6i0dzJ5b+h4/AVl7aPETP8ARfknzMI3CoHC3Frrmt0Hvz01+NZWwcdiMEJpoJHR2bImU6NY5iSvBuIGoplsjEDVjlH8o/8AQFWMbJ9YkdzljV3Yg81VnOvLxWHyrZRXbW9GIxphV8oKk+QHxsxHitewOnK1eptvIGTL4jdeq5GBsTb5/M1HbLwcixtiUKZYnRCCfEGcMVbLzU5GF+oqwUB1PW5+dzUDsP0lMgZmCrYakgcfeuZ737X7+ZljPgTQHXxajM3xP4Ctmx0WWNZI8Qqgcb2YsLaKpby/AVz2BLX9xb4f90FViIN817a8ves7CQkkDvLWta50HIcT+71YUg2B6/3Nv0qY2fhIO7DyOGJf/RXVnA0AJ+yD+tBtm5MckOKhhcAhsxJKW0Ck3DXvy42q/wBqewMCHEg+pxDAE5bhXuSAx5Zrg3PHnrWFJvKYXE0pBmK2jUCyQxn7vORj1GmvyhNo7YkxKyMBIzgZy5v4QL3sBflzuLeulJmI7jWnzIxBbhyPHlwPA6fpTFx51D516Zdb/vSm0MM4IQhi3lABvlPErblxvp1rJw2AdmGRfER4b8AAbFvgQf3agtYbByAHIuaT0t4R7cSfyqcwWHilygoIZwALaqJelydUk9eDeh46+yTRn6xSOhZdDfmGtY/A1se50WLxc4w8dtRcmQ5kVeZIYNYWB4dKb13E9h9htiFieRjFh1HduCCrZgWIBv5QEy3Jva3CrO1MBhjL3KwLdF1yllI52JU+bUee5uQDrpWUm1JGiXDSYhLE5o3jPeJ5T4Hca5lIAF75Tz0FQO1IsVhhGXRkhdrM4IbO1s3dtlJtYXJU66+lUyUm1ZiJWrMRPZH7S2d3Y7yMsU5g+ZfW44j14is7dreZ8JiosYp1UiOdR/uxMbXI5sPztWe2JSQE/Ztc3IIINx5gACLVq64IKWLk93cgDgWF9ND8KywXtO637x5WyVjpMeX1dsHbuHxkfe4aQOgOU6EFWsDlIOoNiPnUlXMew2DECCeR1yYd2XuhzJXMHa3Tyi55qeldOroZlKUoFKUoFKUoFKUoFKUoKE18wdou9J2jjmZTmw8V44VHNb+KQerEX9gvSu29ru3DhNmTMpyyS2gQ+slwxHqEDn4V87bGg58DbToaDORGUIiDNIx+rtxJPEHqLa3/ALVvsuxIdm7PeQuj46ZSuU6kFgVzEakBTfQi3xrX90pUhMmNdQWUiKBCLgublmtpcCxJt90j7QrH3qwOMjEGJlPeYjGNI2Qg3sO7VcxJ1uGNlGij3sM9c9uvaPv+vqt7sNcxqyBYowWEMSAKlzrK1y8ljpmLMwB45QnSuj4raMEOz0wMLAylkeZl1VhYubMOI729hxCheVqhYoosNGvespnIJzEk3I1IUche45cPhUThW8GbmeHrfhWiqmII7wBRqLt6A8R7ai/w9ajsThSsTuAS7KBISfKpcHQdCcgJ/hPWt33m3MfBYZcRnaSZ0zSRBdU0BJDD7AAUG/CxN+VQWyMCbBZGU94DG9mDAZwbC400tyvrzNc2bJan4p7R9W1KVtGvLS45GW6XOVraX0NuF+trm3ua9GTQrrTFwsORLKTcAX8vm+GhrMYAixrpYpjdmeB42E4H1diHJIyi9hqNb8rDjWv7QwhV3AOik69dSBp8KkcEuWPKPM17+9jr8BVk5Xut9SbC2t+QA60EXhjmcLrrppxvy/HWumbn7MgwzlMZh8uIRtJXN4+VgL+FXFwDzvzqu4O4maQTzgBUbMzchlIPdjkWFvE3BdRqeGL2m75Q4lvo2FscPEczOOEr68Oqi5N+ZN+QvhxOD2+Oce5jfmP19F8d+S29PeI3XlxEk0s00IcnwiIqA9rgE38ptzNz61EbS2imDgkwkEveSSEvMQwZVGUL3YYDU6ake1QHcAxF73AHlsTYk5QrfcuLkGvez8DIwdljZEjAzyZCwTMdLniBxOnvwrGnCW6Rktusa1GoiOnb1+fzXnJHiNT6rm7TlWkztkkdPCztk5+LxEixI59L1cxuJDPIY3zKxALXIzZVAY+xYM3resrYG65nKSvIncs5UhWzPe4CpwsC9yRfUAEkAEXju5BZ+5X6vNpcjlpe5JNjXaxXo8ZIvlZgOgNx8qzMLtZVBDRrZgVbIxiLKeKm3hYHoRUVLBMiZ2Tw3tfUAHpcjWr0+FdIYZnACTZshBvqmUMDpofEKgX8TBhT/pu6XsrKw8q8yCNCNOGnKpxYZoSYyyThwA6XBjxka8HDA+HERgXzDxWAOtmvq0MIdsubKLEk8bAC5IA4m16yjiFgcd0CVurFzoWGjWC8E6HieOtSM3GQNhXui2g1bM+XMDoBcDQNcgXtY/gItpCzZ2N+YH6n93rIUNiZZJHYlnJZtb6XzW9hoB8Ky8dg/rBGo1siW9W/9tVOeOfk891uWdcz6P3E2eYNn4aJgAwjBYD7zeIn1Nzqanqt4ePKir90AfIWq5V1SlKUClKUClKUClKUClKUHGf8RWLNsFAOBaWQj1UIqnp9t65lDpF1A5HQg1vv+IVT9Lwl/L3L2984vpxtwrnrtdOR04ipgbTFFErYCGVkWJAkjl3CpeRmZgx4gEpGL8gWvUhtbbK4vasszkd1ABHHYHLm1DsNbHXvPEDY+Gru1sFGcTgUnsMNNFECwIFhd1I62zLFc8ADyJvUVtLYJwmKxMRXIt1kjGp+qfMVtc3IFnWxvqpGtqzxe5C1/elp+0HfGYhyQVUXsSHNkW+W/K+U35Xt61sfZ7hTLigUTPDBkfW5uxsAo5m5u2X09qwsThUgnmSZyjGOJoBqUkWUK1m+4bEHlbKw6VkbvbXGDjKyFlB1LKAdCSzoOeugvy0rRVP9p++D4h5sOqtGO78R9Y2VjED0va9tdAOtQe7TsVzZjqYr6nzZ5Ab9brlraI9p4abCxssYkUNK7RMpRoxIHDXlza5g1zl9LnSoLYGBAYOBkRpCQlywRF8fmOrW0Fz0rk4y0RimJ8tsETN2Ju5Ef82ARBIe9xP1ZNg47ua6fG9rDWsnbe7uGaGTE4WRkkzKfojAubEqD3cv2lA1sRfQ1m9lGG77bKSckE85+IKD8ZR8q7RtHc3AzMWaLK7alkJW562GhPrauisaiIZT3fM2J2RjBGrnDT5Tr/pSEWPraw+PWvW5eHzYtA2ZVZsitYjK3Ekcs+UEDndr8q+jI90GjFoZzbkHF7el1t+VRu2txp8TGUaWNX0KSAEtG4IKuPUEdashou/L4zEg4PBhYsLHZHJZY+8tbwjMReMcDlvc3v66JBuXibkd1MCoYs5Q921joFa1lNvvG3tXbtm9m0wLPiNoSTOy5TZBGvvlU6t6mpjZ24OEidHBdnQ3Ukg2NrX1B1oOLYHsy2qyRTQwgi58DuqkAcCytYFdT151dxW5u1/roTg3XvTGAVZSosQo8rFbWvcngLmvo8Cq0HFcL2fbXGG7hVwsWVrowlkBVSDmvlBDMTbUg89eFuc72bEm2bN9FmYFsiyBkLZcrXAAuAdCrDlX1hXJu3/dwy4ePGRi7wErJb/xOfN/S1vYMxoOCO2Zr2rsPZZsyDG7Onw04DLGQ2UeYeIsWB4hrAAH1PU35AtbbuHt44Wa5v3MgCSAaXQkX/D9OVVt6+iYSu3NzVw8qyKrpDIQ0ciKGujfYIayl8psQbUxO450kaWRla5sQoNuQ8Og0tpa2mldQx+8sE0KIh8ClCpYDQo4KtbUEhVFvUmoTG4tbH8SeHvrXFn42KdKdXRj4eZ626NVw+yIol00HmbqFXXX1J/KvO4ezji9pxXHhV+/f0CG4+GbIPjVrbe0QwKr5eJb71uX8o/fKuodku7hw+HOIkFpZwCAeKxjVR7m+Y+46VfhMVqxN795Vz3iZ1XtDfKUpXYwKUpQKUpQKUpQKUpQKUpQcc/xEYPw4OYDg0kZb1YK6j28D/KuSQNccvga+le0zYRxmzpolXNKo7yIc86agD1IzL/VXzBBJry/X5UHY12Su0NkwGPMcTDcDViGXQtHrcC5yWH3gtQG0NqylY4cSipLEWDOUKuwAQKGBUC4u1zzNz0JyeybeRIJu7lP1b8P4W6+vE/M866xt6OGbKzRxyhQxXMqsD4H8RNjZQRp1Ptes8c6/D6fbwtb19Xzrjd3ruSo8BJN9br/AA5b2Py5Vum7G5GEwpXEYqRcR4EeOBLEAsL2cHVvD7AFhobV0Pbu4+FMedc0bDKDlsFNyATl4A2J4WFYH+T4TCIJJy0pZQ6IbAM3NSB0uNSbanTSr2tFY3KIiZnUNM3hlL3CKFMzsco10NieOutwLnjr0qP2iwhhbLxy9yvqx/1G/MVKYmRnkeV2yv8AIQoBYe1l0ArV8c8mLnjgw63Zj3cKn5l2PIaFiegrzK74nNv+WHVP8KmvMuhdg2yCFxGLYaORCnqE8Tn/AJED+iutVFbv7NjwmGiw0fljULfmx4s59WYkn3rPM1eo5F6lYxnrw2IoMu9MwrAOJq22JoJEyCqGYVFtiqtNiqCXOIFW52jdWRwGRgVZTqCCLEEdLVDPiasPiTQcL7SNwZNnyGSIF8Ex8L8TFf8A236dA3A+9ahh8QVN6+k8biJGBXQgixBFwR0I5iuc7X7OIpWzRfUk8Qnl/wCJ8vwoNW2XtcDgxU9L2/7rNxW11td5CfQn9Kz8N2TyE+Kc5fRBf53P5Vvu6HZzhsMyyZM8g1DyeIg9QOCn1AvVeSu966p3OtbRnZ/uLJiGXE4xCkAIaOJhZpTxDMvFU/hOrc9OPY6tYdCBrV2rIKUpQKUpQKUpQKUpQKUpQKUpQK+e+2PcpsJO2MhU/RZmuwA0hlJ1BtwVjqD1JHMX+hKtYrDJIjRyKrxsCrKwBDA8QQeIoPkLBY3Kef8AY9a6Lu5vy6J3cjeEkHNbMG0tqOI000rK337GJELTbNOZOP0djZl/kc6MPRrH1NcsxUWJwrlZo5Im6OpH56H4Vnkxxf4T6x3Wreau54rftpVy97FlNictr6e5qA2jvDFcs0mdj08RvzseA+fWuXR7aPDKCfS/5VMbN2XjsSQEj7tPvuCLeoB1PwFc08Hze/eZhtGfXu1iGbtja7SEIFIBICRJdmduV7asa6l2a7oHBqcRiAPpcgta9xAh17sH7x0LEc9OVzgbnbtYfB/WWeXEkazOBp1CLfwD5n1rblxZPUfCuulK0jlrHRha02ncpnvq8GasKPXnWQsBqyHppa8F6vLhjV1cJQYWtO7NSSYSrq4YUER9HNV+iGpkQivQjFBCjA1X/LqmsoqtqCGGyx0q4uyh0qWpQYUWAUcqykjAr3SgUpSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgVGbT2VDIPGgb3pSgjE3fwqnwxIPZRWQmzoxwWlKC8mBj6VcXCJ0pSgyY8OvSrohWq0oPYQVW1KUFaUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQf//Z" alt="The Party Van">
+                <div class="card-info">
+                    <h3>The bike</h3>
+                    <ul>
+                        <li>✓ 080 km/h max speed</li>
+                        <li>✓ Free cancellation</li>
+                        <li>✓ 24/7 customer helpline</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">₹300</span>
+                        <a href="#" class="book-now-sm">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
